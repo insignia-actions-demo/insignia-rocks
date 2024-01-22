@@ -5,13 +5,14 @@ branding:
   icon: "award"
   color: "green"
 
-  inputs:
-    sayMyName:
-      description: "Say your name"
-      default: "GitHub"
-  runs:
-    using: "docker"
-    image: "Dockerfile"
-    args:
-      - ${{inputs.sayMyName}}
+inputs:
+  sayMyName:
+    description: "Say your name"
+    default: "GitHub"
+
+runs:
+  using: "docker"
+  image: "Dockerfile"
+  args:
+    - ${{inputs.sayMyName}}
   
